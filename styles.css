@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(16, 25px);
+  }
+  .div:hover{
+    color: aqua;
+  }
