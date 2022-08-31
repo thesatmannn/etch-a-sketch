@@ -1,20 +1,51 @@
-const cdiv = document.querySelector('.container');
+const container = document.querySelector('.container');
 
 
-// Add 16 divs
-for (let i = 1; i < 257; i++) {
+// add 16x16 divs
+//function defaultGrid() {
+for (let i = 0; i < 256; i++) {
   const div = document.createElement('div');
-  div.style.cssText = "border: 1px solid black; height: 25px; width: 25px";  
-  cdiv.appendChild(div);
+  container.appendChild(div);
+  }
+  
+
+
+
+
+const square = document.querySelectorAll('.square');
+
+//add event listener for drawinf
+
+
+  // create divs based on user input on click
+function customGrid () {
+
+  let arg = prompt("How many squares per side?");
+
+if (arg <= 100 && arg > 0) {
+  clear();
+
+  for (let i = 0; i < (arg * arg); i++) {
+    const div = document.createElement('div');
+    div.setAttribute('style', `width:${400/arg}px; height:${400/arg}px`);
+    container.appendChild(div);
+   }
+  }
+ }
+function erase() {
+  container.classList.remove("black-fill-color");
 }
 
-//change colors when mouse passes over divs 
-
-document.getElementById("cdiv").addEventListener("mouseover", colorChange());
-
-
-// change color to div as hover
-
-function colorChange() {
-    cdiv.style.color = "blue";
+function clear() {
+  while(container.firstChild){
+    container.removeChild(container.lastChild); 
+ }
 }
+
+function draw() {
+  container.addEventListener('mouseover', function(e) {
+    e.target.classList.add("black-fill-color");
+  })
+
+}
+
