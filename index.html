@@ -8,13 +8,22 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <h1>Etch-a-Sketch!</h1>
+    <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+</div>
+    <div class="buttons">
+    <div class="color-picker">
     <label for="color">Choose your favorite color!</label>
-    <input type="color" id="color" name="color2" onclick="colorChoice()">
+    <input type="color" id="color" name="color2" onclick="colorChoice()"></div>
     <button id="custom-grid" onclick="customGrid()">Custom Grid</button>
     <button id="draw" onclick="draw()">Draw</button>
-    <button id="erase" onclick="erase()">Erase</button>
     <div class="container"></div>
-    
+    <div class="wrapper">
+    <button id="erase" onclick="erase()">Erase</button>
+    </div>
     <script src="etch-a-sketch.js"></script>
 </body>
 </html>

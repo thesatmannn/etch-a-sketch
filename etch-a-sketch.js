@@ -36,7 +36,6 @@ function erase() {
   const children = container.querySelectorAll('div');
 
   children.forEach(div => {
-    div.classList.remove('black-fill-color')
     if (colorSelection !== null) {
     div.style.backgroundColor = 'white'
     }
@@ -52,7 +51,8 @@ function clear() {
 function draw() {
   container.addEventListener('mouseover', function(e) {
     if (colorSelection == null) {
-    e.target.classList.add("black-fill-color");
+      console.log(colorSelection);
+    e.target.style.backgroundColor = 'black';
     }
     else {
     e.target.style.backgroundColor = colorSelection;
