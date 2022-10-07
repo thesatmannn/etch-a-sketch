@@ -7,7 +7,6 @@ function colorChoice() {
 userColor.addEventListener("change",(e) => {
   colorSelection = e.target.value;
   return colorSelection;
- //console.log(colorSelection);
 });
 }
 
@@ -19,7 +18,7 @@ for (let i = 0; i < 256; i++) {
   
 // create grid based on user input on click
 function customGrid () {
-  let arg = prompt("How many squares per side?");
+  let arg = prompt("How many squares per side?(1-100)");
 
   if (arg <= 100 && arg > 0) {
    clear();
@@ -51,7 +50,6 @@ function clear() {
 function draw() {
   container.addEventListener('mouseover', function(e) {
     if (colorSelection == null) {
-      console.log(colorSelection);
     e.target.style.backgroundColor = 'black';
     }
     else {
