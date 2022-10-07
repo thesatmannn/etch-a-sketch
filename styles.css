@@ -68,8 +68,6 @@ body {
   height: 400px;
   align-content: center;
   cursor: crosshair;
-  
-
 }
 
 .etchas {
@@ -105,69 +103,20 @@ button {
 
 }
 
+#rainbow {
+background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+}
+  
+
 button:hover {
  background-color: rgba(43, 43, 43, 0.212);
  color:white;
  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-
-  
 .container>div {
   height: 25px;
   width: 25px;
   background-color: white ;
   border-radius: 18% 18%;
-
-
 }
-
-.wrapper{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-a{
-  display: block;
-  width: 200px;
-  line-height: 40px;
-  font-size: 18px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: #333;
-  border: 2px solid #333;
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
-}
-
-a span{
-  position: relative;
-  z-index: 2;
-}
-
-a:after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ff003b;
-  transition: all .35s;
-}
-
-a:hover{
-  color: #fff;
-}
-
-a:hover:after{
-  width: 100%;
-}
-
-
-
-  
