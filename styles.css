@@ -48,7 +48,6 @@ text-shadow: 2px 2px 4px #000000;
 
 body {
   text-align: center;
-  background-color: aqua;
   align-content: center;
   margin: 0px;
   flex-direction: column;
@@ -60,7 +59,7 @@ body {
 }
 
 .container {
-  margin-top: 40px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -68,9 +67,12 @@ body {
   height: 400px;
   align-content: center;
   cursor: crosshair;
+  
 }
 
 .etchas {
+  margin-left: 650px;
+  margin-top: 20px;
   width: 600px;
   height: 600px;
   border: 5px solid red;
@@ -78,10 +80,10 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background-image: url("./etch-a-sketch-complete.png");
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.84),0 17px 50px 0 rgba(0,0,0,0.19);
-  border-radius: 25% 25%;
+  border-radius: 20% 20%;
 }
 
 button {
@@ -98,7 +100,6 @@ button {
  border: none;
  color: white;
  border-radius: 25% 10%;
- margin-bottom: 50px;
  margin-top: 20px;
 
 }
@@ -118,5 +119,5 @@ button:hover {
   height: 25px;
   width: 25px;
   background-color: white ;
-  border-radius: 18% 18%;
+  border-radius: 10% 10%;
 }

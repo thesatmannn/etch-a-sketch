@@ -57,3 +57,7 @@ function draw() {
     }
   })
 }
+
+function rainbow(){
+  
+}
