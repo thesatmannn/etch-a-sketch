@@ -1,6 +1,15 @@
 const container = document.querySelector('.container');
 let userColor = document.querySelector("#color");
 let colorSelection
+let mouseDown = false;
+
+container.addEventListener('mousedown', function(e){
+ mouseDown = true;
+})
+
+container.addEventListener('mouseup', function(e){
+  mouseDown = false;
+ })
 
 //listen for user to select color and return value to colorSelection
 function colorChoice() {
@@ -49,10 +58,10 @@ function clear() {
 
 function draw() {
   container.addEventListener('mouseover', function(e) {
-    if (colorSelection == null) {
+    if (colorSelection == null && mouseDown == true) {
     e.target.style.backgroundColor = 'black';
     }
-    else {
+    else if(colorSelection !== null && mouseDown == true) {
     e.target.style.backgroundColor = colorSelection;
     }
   })
