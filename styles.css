@@ -55,7 +55,7 @@ body {
   color: white;
   border: #000000;
   text-shadow: 2px 2px 4px #000000;
- 
+
 }
 
 .container {
@@ -83,7 +83,6 @@ body {
   border-radius: 20% 20%;
 }
 
-
 button {
  padding: 7px;
  border: none;
@@ -108,7 +107,12 @@ button {
 #rainbow {
 background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
 }
-  
+
+#draw:focus {
+background-color: rgba(43, 43, 43, 0.212);
+ color:white;
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
 
 button:hover {
  background-color: rgba(43, 43, 43, 0.212);

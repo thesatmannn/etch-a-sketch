@@ -3,6 +3,7 @@ let userColor = document.querySelector("#color");
 let colorSelection
 let mouseDown = false;
 
+//listen for mouse press to determine draw function
 container.addEventListener('mousedown', function(e){
  mouseDown = true;
 })
@@ -68,5 +69,16 @@ function draw() {
 }
 
 function rainbow(){
-  
+  container.addEventListener('mouseover', function(e) {
+    if (mouseDown == true) {
+    e.target.style.backgroundColor = randomColor();
+    }
+ })
 }
+
+function randomColor(){
+  let a = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  let c = Math.floor(Math.random() * 256);
+  return `rgb(${a}, ${b}, ${c})`;
+  }
