@@ -2,6 +2,11 @@ const container = document.querySelector('.container');
 let userColor = document.querySelector("#color");
 let colorSelection
 let mouseDown = false;
+let rainbowColor = false;
+
+container.ondragstart = () => {
+  return false;
+}
 
 //listen for mouse press to determine draw function
 container.addEventListener('mousedown', function(e){
@@ -14,6 +19,7 @@ container.addEventListener('mouseup', function(e){
 
 //listen for user to select color and return value to colorSelection
 function colorChoice() {
+  rainbowColor = false;
 userColor.addEventListener("change",(e) => {
   colorSelection = e.target.value;
   return colorSelection;
@@ -57,20 +63,21 @@ function clear() {
  }
 }
 
-function draw() {
+
   container.addEventListener('mouseover', function(e) {
-    if (colorSelection == null && mouseDown == true) {
+    if (colorSelection == null && mouseDown == true && rainbowColor == false) {
     e.target.style.backgroundColor = 'black';
     }
-    else if(colorSelection !== null && mouseDown == true) {
+    else if(colorSelection !== null && mouseDown == true && rainbowColor == false) {
     e.target.style.backgroundColor = colorSelection;
     }
   })
-}
+
 
 function rainbow(){
+  rainbowColor = true;
   container.addEventListener('mouseover', function(e) {
-    if (mouseDown == true) {
+    if (mouseDown == true && rainbowColor == true) {
     e.target.style.backgroundColor = randomColor();
     }
  })
